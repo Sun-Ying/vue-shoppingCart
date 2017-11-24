@@ -73,7 +73,7 @@
                   <dd class="tel">{{address.tel}}</dd>
                 </dl>
                 <div class="addr-opration addr-edit">
-                  <a href="javascript:;" class="addr-edit-btn" v-on:click="editConfirm(address);">
+                  <a href="javascript:;" class="addr-edit-btn" v-on:click="editConfirm(index);">
                     <svg class="icon icon-edit">
                       <use xlink:href="#icon-edit"></use>
                     </svg>
@@ -86,7 +86,7 @@
                     </svg>
                   </a>
                 </div>
-                <div class="addr-opration addr-set-default" v-if="!address.isDefault" v-on:click="setDefault(address.addressId)">
+                <div class="addr-opration addr-set-default" v-if="!address.isDefault" v-on:click="setDefault(index)">
                   <a href="javascript:;" class="addr-set-default-btn">
                     <i>设为默认</i>
                   </a>
@@ -169,7 +169,7 @@
                   </label>
                   <div class="md-form-item__content" style="margin-left: 80px;">
                     <div class="el-input">
-                      <input type="text" autocomplete="off" class="md-input__inner" v-model="newName">
+                      <input type="text" autocomplete="off" class="md-input__inner" v-model="newAddress.userName">
                     </div>
                   </div>
                 </div>
@@ -179,7 +179,7 @@
                   </label>
                   <div class="md-form-item__content" style="margin-left: 80px;">
                     <div class="el-input">
-                      <input type="text" autocomplete="off" class="md-input__inner" v-model="newAddress">
+                      <input type="text" autocomplete="off" class="md-input__inner" v-model="newAddress.streetName">
                     </div>
                   </div>
                 </div>
@@ -189,7 +189,7 @@
                   </label>
                   <div class="md-form-item__content" style="margin-left: 80px;">
                     <div class="el-input">
-                      <input type="text" autocomplete="off" class="md-input__inner" v-model="newTel">
+                      <input type="text" autocomplete="off" class="md-input__inner" v-model="newAddress.tel">
                     </div>
                   </div>
                 </div>
